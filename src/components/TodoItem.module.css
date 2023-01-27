@@ -1,0 +1,70 @@
+.itemBlock {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.itemBlock:hover .removeBtn {
+  display: initial;
+}
+
+.checkCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid #ced4da;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.checkCircle:hover {
+  border: 1px solid #20c997;
+  color: #20c997;
+}
+
+.checkCircleDone {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid #38d9a9;
+  color: #38d9a9;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.text {
+  flex: 1;
+  font-size: 21px;
+  color: #495057;
+}
+
+.textDone {
+  flex: 1;
+  font-size: 21px;
+  color: #ced4da;
+}
+
+.removeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dee2e6;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.removeBtn:hover {
+  color: #ff6b6b;
+}
