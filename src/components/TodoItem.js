@@ -12,8 +12,9 @@ const TodoItem = ({ id, text, done }) => {
   const onRemove = () => dispatch({ type: "REMOVE", id });
 
   const textChangeHandler = () => setinputFormOpen(true);
-
   const onChange = (event) => setInputText(event.target.value);
+  const onBlur = () => setinputFormOpen(false);
+
   const onSubmit = (event) => {
     event.preventDefault();
 
@@ -42,6 +43,7 @@ const TodoItem = ({ id, text, done }) => {
         <form className={classes.insertForm} onSubmit={onSubmit}>
           <input
             autoFocus
+            onBlur={onBlur}
             className={classes.input}
             onChange={onChange}
             value={inputText}
