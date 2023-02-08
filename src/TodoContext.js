@@ -14,7 +14,7 @@ const initialState = [
   {
     id: 3,
     text: "Context 만들기",
-    done: false,
+    done: true,
   },
   {
     id: 4,
@@ -29,6 +29,10 @@ const todoReducer = (state, action) => {
       return state.concat(action.todo);
     case "REMOVE":
       return state.filter((todo) => todo.id !== action.id);
+    case "UPDATE":
+      return state.map((todo) =>
+        todo.id === action.id ? { ...todo, text: action.text } : todo
+      );
     case "TOGGLE":
       return state.map((todo) =>
         todo.id === action.id ? { ...todo, done: !todo.done } : todo
